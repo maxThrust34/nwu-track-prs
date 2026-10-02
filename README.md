@@ -18,7 +18,7 @@ A static site with every current Nebraska Wesleyan track athlete's college PRs, 
 
 It writes `docs/data/athletes.json`, `docs/data/conference.json` and `docs/data/national.json`.
 
-`.github/workflows/update.yml` runs it every day at 3:00am Central on GitHub and commits any new data. You can also start it by hand from the Actions tab ("Run workflow"). With GitHub Pages serving `docs/`, the site updates on its own after every meet.
+`.github/workflows/update.yml` runs it every day at 3:00am Central on GitHub, commits any new data and republishes the site. You can also start it by hand from the Actions tab ("Run workflow"). With GitHub Pages serving `docs/`, the site updates on its own after every meet.
 
 ### Run locally
 
