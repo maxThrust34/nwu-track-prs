@@ -1,0 +1,5 @@
+{
+  "_comment": "match: NWU roster name -> TFRRS athlete id when automatic matching misses (nicknames etc.); null = no TFRRS profile. previous_profiles: NWU roster name -> list of TFRRS ids from a previous school that TFRRS has NOT already linked to their NWU profile (most transfers are linked automatically).",
+  "match": {},
+  "previous_profiles": {}
+}

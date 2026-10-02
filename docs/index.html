@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NWU Track PRs</title>
+  <link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <div class="brand">
+        <span class="logo">NWU</span>
+        <div>
+          <h1>Prairie Wolves Track &amp; Field</h1>
+          <p class="sub" id="updated">Loading…</p>
+        </div>
+      </div>
+      <nav class="tabs" role="tablist">
+        <button class="tab active" data-tab="events" role="tab">Events</button>
+        <button class="tab" data-tab="athletes" role="tab">Athletes</button>
+        <button class="tab" data-tab="conference" role="tab">Conference Top 10</button>
+        <button class="tab" data-tab="national" role="tab">National Top 25</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="toolbar">
+      <div class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="search" type="search" placeholder="Search your name…" autocomplete="off" aria-label="Search athletes">
+        <ul id="suggest" class="suggest" hidden></ul>
+      </div>
+      <div class="filters">
+        <div class="seg" id="gender">
+          <button data-v="m" class="on">Men</button><button data-v="f">Women</button>
+        </div>
+        <div class="seg" id="stype">
+          <button data-v="outdoor" class="on">Outdoor</button><button data-v="indoor">Indoor</button><button data-v="xc">XC</button>
+        </div>
+        <select id="scope" class="select" aria-label="Season"></select>
+        <select id="natlist" class="select" aria-label="List" hidden></select>
+      </div>
+    </div>
+
+    <section id="view-events" class="view">
+      <div id="latest"></div>
+      <nav id="event-jump" class="event-jump"></nav>
+      <div id="events" class="grid"></div>
+    </section>
+
+    <section id="view-athletes" class="view" hidden>
+      <div id="athletes" class="athlete-grid"></div>
+    </section>
+
+    <section id="view-conference" class="view" hidden>
+      <p class="note" id="conference-note"></p>
+      <nav id="conference-jump" class="event-jump"></nav>
+      <div id="conference" class="grid wide"></div>
+    </section>
+
+    <section id="view-national" class="view" hidden>
+      <p class="note" id="national-note"></p>
+      <nav id="national-jump" class="event-jump"></nav>
+      <div id="national" class="grid wide"></div>
+    </section>
+  </main>
+
+  <dialog id="profile"><div id="profile-body"></div></dialog>
+
+  <footer class="wrap foot">
+    Data from <a href="https://www.tfrrs.org/teams/tf/NE_college_m_Nebraska_Wesleyan.html">TFRRS</a> and the
+    <a href="https://nwusports.com/sports/mens-track-and-field/roster">NWU roster</a>. Updates automatically after meets are posted.
+  </footer>
+  <script src="app.js?v=4"></script>
+</body>
+</html>
