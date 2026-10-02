@@ -2,9 +2,11 @@ name: Update PRs
 
 on:
   schedule:
-    # 3:00am Central every day. GitHub cron is UTC-only, so fire at both 08:00 UTC
-    # (3am CDT) and 09:00 UTC (3am CST) and let the guard below skip the wrong one.
-    - cron: "0 8,9 * * *"
+    # 3:00am Central on Monday and Tuesday mornings (Sunday night / Monday night),
+    # after weekend meet results are posted to TFRRS. GitHub cron is UTC-only, so
+    # fire at both 08:00 UTC (3am CDT) and 09:00 UTC (3am CST) and let the guard
+    # below skip the wrong one. Use "Run workflow" in Actions for an extra refresh.
+    - cron: "0 8,9 * * 1,2"
   workflow_dispatch: {}
   push:
     branches: [main]
